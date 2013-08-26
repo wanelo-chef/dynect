@@ -27,3 +27,7 @@
 #
 # set[:dynect][:ec2][:type] = "ec2"
 # set[:dynect][:ec2][:env]  = "prod"
+
+# the ohai attribute from which to derive the IP address
+# If ipaddr_extensions is available, 'privateaddress' can be used.
+default['dynect']['address_attribute'] = 'ipaddress'
