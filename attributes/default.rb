@@ -31,3 +31,4 @@
 # the ohai attribute from which to derive the IP address
 # If ipaddr_extensions is available, 'privateaddress' can be used.
 default['dynect']['address_attribute'] = 'ipaddress'
+default['dynect']['hostname_attribute'] = 'hostname'
