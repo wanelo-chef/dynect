@@ -21,11 +21,12 @@ include_recipe 'dynect'
 
 address_attribute = node['dynect']['address_attribute']
 hostname_attribute = node['dynect']['hostname_attribute']
+hostname = node.send(hostname_attribute) # allows for node.name
 
 dynect_rr node["hostname"] do
   record_type "A"
   rdata({ "address" => node[address_attribute] })
-  fqdn "#{node[hostname_attribute]}.#{node["dynect"]["domain"]}"
+  fqdn "#{hostname}.#{node["dynect"]["domain"]}"
   customer node["dynect"]["customer"]
   username node["dynect"]["username"]
   password node["dynect"]["password"]
