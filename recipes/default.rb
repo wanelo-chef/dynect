@@ -19,5 +19,6 @@
 
 # Install dynect gem for usage within Chef runs
 chef_gem "dynect_rest" do
+  version "0.4.4.beta"
   action :install
 end
